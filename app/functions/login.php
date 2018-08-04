@@ -14,13 +14,11 @@ foreach ($users as $user) {
 	if ($login == $regLogin
 		&& $pass == $regPass
 	) {
+		session_start();
 		$_SESSION['userID'] = $login;
 		$_SESSION['password'] = $pass;
-		echo '<script>alert("Добро пожаловать на борт!");
-			document.location.href = "http://leaderit.local/app/views/chat_view.php";</script>';
+		header("Location: http://leaderit.local/app/views/chat_view.php");
 		break;
-	} else {
-		continue;
 	}
 }
 

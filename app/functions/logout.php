@@ -1,5 +1,6 @@
 <?php
 if (isset($_POST['logout'])) {
+	session_unset();
 	session_destroy();
-	echo '<script>document.location.href = "http://leaderit.local/index.php";</script>';
+	header("Location: http://leaderit.local/index.php");
 }

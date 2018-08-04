@@ -13,9 +13,7 @@ foreach ($users as $user) {
 	if ($regLogin == $login) {
 		echo '<script>alert("Такой пользователь уже существует!");
 			document.location.href = "http://leaderit.local/app/views/registration_view.php";</script>';
-		break;
-	} else {
-		continue;
+		die();
 	}
 }
 

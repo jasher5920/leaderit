@@ -9,7 +9,7 @@
 <body>
 <div class="auth">
 	<h3>Чат - вход</h3><br>
-	<form method="POST" action="../db/entrance.php">
+	<form method="POST" action="../functions/login.php">
 		Логин:<br>
 		<input title="login" name="login" required><br>
 		Пароль:<br>

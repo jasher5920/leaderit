@@ -1,11 +1,3 @@
-<?php
-
-include_once "../db/connect.php";
-
-$base = connect();
-$query = mysqli_query($base, "SELECT * FROM users");
-$users = mysqli_fetch_all($query, MYSQLI_ASSOC);
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,8 +9,13 @@ $users = mysqli_fetch_all($query, MYSQLI_ASSOC);
 <body>
 <div class="auth">
 	<h3>Чат - регистрация</h3><br>
-	<form method="POST" action="../db/registration.php">
-
+	<form method="POST" action="../functions/registration.php">
+		Логин:<br>
+		<input title="login" name="login" required><br>
+		Пароль:<br>
+		<input title="pass" name="pass" type="password" required><br><br>
+		<button type="submit" class="btn btn-success">Зарегистрироваться</button>
+		<a href="../../index.php" class="btn btn-default">Отмена</a>
 	</form>
 </div>
 </body>
